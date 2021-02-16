@@ -28,7 +28,7 @@ async function fetchData () {
       return sortedData(resultOriginal, codeExpedition)
     }
   } catch (err) {
-    return err
+    return err.response.data
   }
 }
 

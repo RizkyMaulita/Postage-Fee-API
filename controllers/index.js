@@ -6,9 +6,11 @@ class Controller {
   static async getExpeditions (req, res, next) {
     try {
       const data = await fetchData()
-      if (data) {
+      if (data && data.length) {
         res.status(200).json(data)
-      }      
+      }else {
+        throw data
+      }
     } catch (err) {
       next(err)
     }
