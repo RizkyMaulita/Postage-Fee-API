@@ -18,7 +18,7 @@ async function fetchData () {
       url: baseURLOriginal,
       method: 'POST',
       headers: {
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMSwiZXhwIjoxNjQ0OTkyMzQ3fQ.LTf1BxysqnpdNNtk1_dlWuYXqfDoN6ef1zP1rAHKM-4'
+        Authorization: process.env.TOKEN
       },
       data: payload
     })
